@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nitika Mummidivarapu — Strategy and operations</title>
+  <meta name="description" content="Strategist and operator in New York. Six years at McKinsey across enterprise AI, growth and product strategy.">
+  <meta name="theme-color" content="#0B0A09">
+  <meta property="og:title" content="Nitika Mummidivarapu — Strategy and operations">
+  <meta property="og:description" content="Strategist and operator in New York. Six years at McKinsey across enterprise AI, growth and product strategy.">
+  <meta property="og:image" content="/og.png">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="preload" href="/fonts/newsreader-300.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/newsreader-300i.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/dm-mono-400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/src/styles.css">
+</head>
+<body>
+  <div id="app">
+
+    <!-- SHARED ELEMENT: one arch, pinned to the viewport -->
+    <div class="arch-wrap" aria-hidden="true">
+      <svg id="arch-svg" width="100%" height="100%" preserveAspectRatio="xMidYMin slice">
+        <path id="p-sea" fill="none" stroke="#FFFAEA" stroke-width="1" opacity="0"></path>
+        <path id="p-outer" class="draw" pathLength="1" fill="none" stroke="#FFFAEA" stroke-width="1.2" opacity="0.62"></path>
+        <path id="p-inner" class="draw" pathLength="1" fill="none" stroke="#FFFAEA" stroke-width="1" opacity="0.38"></path>
+        <path id="p-ticks" fill="none" stroke="#FFFAEA" stroke-width="1" opacity="0"></path>
+        <path id="p-stones" fill="#FFFAEA"></path>
+        <g id="g-col" opacity="0">
+          <path id="p-entab" fill="none" stroke="#FFFAEA" stroke-width="1.2" opacity="0.62" vector-effect="non-scaling-stroke"></path>
+          <path id="p-shaft" fill="none" stroke="#FFFAEA" stroke-width="1" vector-effect="non-scaling-stroke"></path>
+          <path id="p-base" fill="#0B0A09" stroke="#FFFAEA" stroke-width="1.1" vector-effect="non-scaling-stroke"></path>
+          <path id="p-cap" fill="#0B0A09" stroke="#FFFAEA" stroke-width="1.1" vector-effect="non-scaling-stroke"></path>
+        </g>
+        <g id="g-star">
+          <path d="M6 0C6.4 4 8 5.6 12 6 8 6.4 6.4 8 6 12 5.6 8 4 6.4 0 6 4 5.6 5.6 4 6 0Z" fill="#FFFAEA"></path>
+        </g>
+      </svg>
+    </div>
+
+    <!-- 0 · HERO -->
+    <header id="top" class="section">
+      <nav aria-label="Primary" class="nav">
+        <a href="#top" class="logo" aria-label="Back to top">nm</a>
+        <a class="pill mono" href="#contact">Contact <span class="pill-arrow" aria-hidden="true">→</span></a>
+      </nav>
+      <div class="hero-body">
+        <p class="hero-intro load">Hi, my name is Nitika. I'm a</p>
+        <h1 class="hero-h1">
+          <span class="load load-2">Strategist and</span>
+          <span class="load load-2">Operator</span>
+        </h1>
+        <p class="load load-3 hero-sub">My work is focused on how new technologies become part of everyday life.</p>
+        <div class="load load-4">
+          <a class="pill mono" href="#about">Keep exploring <span class="pill-arrow" aria-hidden="true">↓</span></a>
+        </div>
+      </div>
+    </header>
+
+    <!-- 1 · ABOUT -->
+    <section id="about" class="about-section" aria-labelledby="about-label">
+      <div class="about-sticky">
+        <div id="about-label" class="mono section-label about-label">About</div>
+        <p class="about-text" id="about-para">
+          Over six years at McKinsey, I've helped teams grow their businesses, build better products, and adopt new technology.
+          <em class="about-italic" id="about-italic">Before that, I founded a nonprofit and researched how people understand emerging technology.</em>
+        </p>
+      </div>
+    </section>
+
+    <!-- 2 · CAREER -->
+    <section id="career" class="section" aria-labelledby="career-label">
+      <h2 id="career-label" class="mono section-label career-label">Career</h2>
+      <div class="rows-wrap career-rows">
+        <div class="row reveal">
+          <span class="mono row-year">2020 — Now</span>
+          <span class="row-org">McKinsey &amp; Company</span>
+          <span class="row-role">Associate Partner</span>
+        </div>
+        <div class="row reveal">
+          <span class="mono row-year">2015 — 2019</span>
+          <span class="row-org">The Diaper Bank Project</span>
+          <span class="row-role">Founder and Director</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3 · EDUCATION -->
+    <section id="education" class="section" aria-labelledby="education-label">
+      <h2 id="education-label" class="mono section-label career-label">Education</h2>
+      <div class="rows-wrap edu-rows">
+        <div class="row edu-row reveal">
+          <span class="mono row-year">2019 — 2020</span>
+          <span class="row-org">University of Cambridge</span>
+          <div class="row-detail">
+            <div class="row-role">MPhil, History and Philosophy of Science and Medicine</div>
+            <div class="mono tag">First Class Honors</div>
+            <div class="mono tag">Gates Cambridge Scholar</div>
+          </div>
+        </div>
+        <div class="row edu-row reveal">
+          <span class="mono row-year">2015 — 2019</span>
+          <span class="row-org">University of California, Davis</span>
+          <div class="row-detail">
+            <div class="row-role">B.S., Biochemistry and Molecular Biology</div>
+            <div class="mono tag">Summa Cum Laude</div>
+            <div class="mono tag">Margarita Robinson Leadership Award</div>
+            <div class="mono tag">Mary Jeanne Gilhooly Award</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4 · CONTACT -->
+    <footer id="contact" class="section contact-section">
+      <div class="contact-label-wrap">
+        <span class="mono reveal" style="color:#A8A397">Contact</span>
+      </div>
+      <div class="contact-body">
+        <h2 class="contact-h2 reveal">Let's talk.</h2>
+        <div class="contact-btns reveal">
+          <a class="pill mono email-btn" href="#contact"
+             data-u="bml0aWthLm0=" data-d="Z21haWwuY29t">Email <span class="pill-arrow" aria-hidden="true">→</span></a>
+          <a class="pill mono" href="https://www.linkedin.com/in/nitikamummidivarapu" target="_blank" rel="noopener">LinkedIn <span class="pill-arrow" aria-hidden="true">↗</span></a>
+        </div>
+        <noscript><p class="mono" style="margin-top:12px;color:#A8A397">Email: nitika [at] gmail [dot] com</p></noscript>
+      </div>
+      <div class="footer-bar mono">
+        <span>© 2026 Nitika Mummidivarapu</span><span>New York</span><span>Set in Newsreader &amp; DM Mono</span>
+      </div>
+    </footer>
+
+  </div><!-- #app -->
+  <script type="module" src="/src/main.ts"></script>
+</body>
+</html>

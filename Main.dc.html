@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Nitika Mummidivarapu — Desktop</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&amp;family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;1,6..72,300;1,6..72,400&amp;family=Cormorant+Garamond:wght@500&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#0B0A09}
+a{color:#FFFAEA}a:hover{color:#D9D2BE}
+.mono{font-family:'DM Mono',ui-monospace,Menlo,monospace;font-size:11px;letter-spacing:0.14em;text-transform:uppercase}
+.pill{display:inline-flex;align-items:center;gap:10px;min-height:44px;box-sizing:border-box;padding:0 6px 0 16px;background:#0B0A09;border:1px solid rgba(255,250,234,0.22);border-radius:3px;text-decoration:none;color:#FFFAEA;transition:background .3s,border-color .3s}
+.pill:hover{background:#1A1815;border-color:rgba(255,250,234,0.5)}
+.pill-arrow{display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;border:1px solid rgba(255,250,234,0.3);border-radius:2px;font-size:11px;transition:transform .3s}
+.pill:hover .pill-arrow{transform:translateX(3px)}
+.tag{display:inline-block;padding:7px 10px;background:#0B0A09;border:1px solid rgba(255,250,234,0.18);border-radius:2px}
+.row{display:grid;grid-template-columns:130px 0.9fr 1.1fr;gap:24px;align-items:center;height:104px;box-sizing:border-box;border-bottom:1px solid rgba(255,250,234,0.16)}
+
+@keyframes rise{from{opacity:0;transform:translateY(48px)}}
+@keyframes dash{from{stroke-dashoffset:1}}
+@media (prefers-reduced-motion: no-preference){
+  .load{animation:rise 1.6s cubic-bezier(.16,1,.3,1) both}
+  .load-2{animation-delay:.2s}.load-3{animation-delay:.4s}.load-4{animation-delay:.7s}
+  .draw{stroke-dasharray:1;animation:dash 2.6s cubic-bezier(.65,0,.35,1) .1s both}
+  @supports (animation-timeline: view()){
+    .reveal{animation:rise linear both;animation-timeline:view();animation-range:entry 10% cover 40%}
+  }
+}
+</style>
+</helmet>
+<div style="background: #0B0A09; color: #FFFAEA; font-family: 'Newsreader', 'Iowan Old Style', Georgia, serif; font-weight: 300; position: relative; overflow-x: clip">
+
+<!-- SHARED ELEMENT: one arch, pinned to the viewport, re-shaped by scroll position -->
+<div aria-hidden="true" style="position: sticky; top: 0; height: 900px; margin-bottom: -900px; z-index: 0; pointer-events: none">
+  <svg width="100%" height="900" viewBox="0 0 {{W}} 900" preserveAspectRatio="xMidYMin slice" style="display: block">
+    <path d="{{sea}}" fill="none" stroke="#FFFAEA" stroke-width="1" opacity="{{seaOp}}"></path>
+    <path class="draw" pathLength="1" d="{{outer}}" fill="none" stroke="#FFFAEA" stroke-width="1.2" opacity="{{outerOp}}"></path>
+    <path class="draw" pathLength="1" d="{{inner}}" fill="none" stroke="#FFFAEA" stroke-width="1" opacity="{{innerOp}}"></path>
+    <path d="{{ticks}}" fill="none" stroke="#FFFAEA" stroke-width="1" opacity="{{tickOp}}"></path>
+    <path d="{{stones}}" fill="#FFFAEA"></path>
+    <g opacity="{{colOp}}">
+      <path d="{{entab}}" fill="none" stroke="#FFFAEA" stroke-width="1.2" opacity="0.62" vector-effect="non-scaling-stroke"></path>
+      <path d="{{shaftL}}" fill="none" stroke="#FFFAEA" stroke-width="1" vector-effect="non-scaling-stroke"></path>
+      <path d="{{baseL}}" fill="#0B0A09" stroke="#FFFAEA" stroke-width="1.1" vector-effect="non-scaling-stroke"></path>
+      <path d="{{capL}}" fill="#0B0A09" stroke="#FFFAEA" stroke-width="1.1" vector-effect="non-scaling-stroke"></path>
+    </g>
+    <g transform="{{starT}}"><path d="M6 0C6.4 4 8 5.6 12 6 8 6.4 6.4 8 6 12 5.6 8 4 6.4 0 6 4 5.6 5.6 4 6 0Z" fill="#FFFAEA"></path></g>
+  </svg>
+</div>
+
+<!-- 0 · HERO -->
+<header id="top" style="position: relative; z-index: 1; height: 900px">
+  <div style="position: absolute; left: 0; right: 0; top: 72px; height: 1px; background: rgba(255,250,234,0.18)"></div>
+  <nav aria-label="Primary" style="position: absolute; left: 0; right: 0; top: 0; height: 72px; display: flex; align-items: center; justify-content: space-between; padding: 0 24px 0 16px">
+    <a href="#top" aria-label="Back to top" style="display: inline-flex; align-items: center; justify-content: center; min-width: 44px; height: 44px; text-decoration: none; font-family: 'Cormorant Garamond', 'Newsreader', Georgia, serif; font-size: 30px; font-weight: 500; letter-spacing: 0.04em">nm</a>
+    <a class="pill mono" href="#contact">Contact <span class="pill-arrow" aria-hidden="true">→</span></a>
+  </nav>
+  <div style="position: absolute; left: 50%; top: 300px; width: 560px; margin-left: -280px; text-align: center; display: flex; flex-direction: column; align-items: center">
+    <h1 style="margin: 0; font-weight: 300; font-size: 64px; line-height: 1.02; letter-spacing: -0.025em"><span class="load" style="display: block">Strategist and</span><span class="load load-2" style="display: block">Operator</span></h1>
+    <p class="load load-3" style="margin: 24px 0 0; font-size: 18px; line-height: 1.45; color: rgba(255,250,234,0.86); max-width: 460px">My work is focused on how new technologies become part of everyday life.</p>
+    <div class="load load-4" style="margin-top: 28px"><a class="pill mono" href="#about">Keep exploring <span class="pill-arrow" aria-hidden="true">↓</span></a></div>
+  </div>
+</header>
+
+<!-- 1 · ABOUT -->
+<section id="about" style="position: relative; z-index: 1; height: 1500px">
+  <div style="position: sticky; top: 0; height: 900px">
+  <div class="mono" style="position: absolute; left: 300px; top: 560px; width: 200px; margin-left: -100px; text-align: center; color: #A8A397">About</div>
+  <p style="position: absolute; left: 540px; right: 120px; top: 300px; margin: 0; max-width: 780px; opacity: {{aboutOp}}; transform: translateY({{aboutY}}px); font-size: 38px; line-height: 1.24; letter-spacing: -0.015em">I’m a strategy and operating leader. For six years at McKinsey I’ve taken high-stakes, ambiguous problems from first framing to measurable result, across enterprise AI, growth, product strategy and transformation. <em style="font-style: italic; color: #CFC9B8; opacity: {{itOp}}">Before that, I built a nonprofit from scratch and researched public understandings of emerging technology.</em></p>
+  </div>
+</section>
+
+<!-- 2 · CAREER -->
+<section id="career" style="position: relative; z-index: 1; height: 900px">
+  <h2 class="mono" style="position: absolute; left: 340px; top: 180px; margin: 0; font-weight: 400; color: #A8A397">Career</h2>
+  <div style="position: absolute; left: 340px; right: 120px; top: 250px; max-width: 980px; border-top: 1px solid rgba(255,250,234,0.16)">
+    <div class="row reveal"><span class="mono" style="color: #CFC9B8">2020 — Now</span><span style="font-size: 30px; letter-spacing: -0.01em">McKinsey &amp; Company</span><span style="font-size: 22px; font-style: italic; color: #CFC9B8">Associate Partner</span></div>
+    <div class="row reveal"><span class="mono" style="color: #CFC9B8">2015 — 2019</span><span style="font-size: 30px; letter-spacing: -0.01em">The Diaper Bank Project</span><span style="font-size: 22px; font-style: italic; color: #CFC9B8">Founder and Director</span></div>
+  </div>
+</section>
+
+<!-- 3 · EDUCATION -->
+<section id="education" style="position: relative; z-index: 1; height: 900px">
+  <h2 class="mono" style="position: absolute; left: 340px; top: 180px; margin: 0; font-weight: 400; color: #A8A397">Education</h2>
+  <div style="position: absolute; left: 340px; right: 120px; top: 250px; max-width: 980px; border-top: 1px solid rgba(255,250,234,0.16)">
+    <div class="row reveal" style="height: 156px"><span class="mono" style="color: #CFC9B8">2019 — 2020</span><span style="font-size: 30px; letter-spacing: -0.01em">University of Cambridge</span><div><div style="font-size: 22px; font-style: italic; color: #CFC9B8">MPhil, History and Philosophy of Science and Medicine</div><div class="mono" style="margin-top: 8px; font-size: 10px; color: #A8A397">Gates Scholar</div><div class="mono" style="margin-top: 6px; font-size: 10px; color: #A8A397">First Class Honors</div></div></div>
+    <div class="row reveal" style="height: 156px"><span class="mono" style="color: #CFC9B8">2015 — 2019</span><span style="font-size: 30px; letter-spacing: -0.01em">University of California, Davis</span><div><div style="font-size: 22px; font-style: italic; color: #CFC9B8">B.S., Biochemistry and Molecular Biology</div><div class="mono" style="margin-top: 8px; font-size: 10px; color: #A8A397">Summa Cum Laude</div><div class="mono" style="margin-top: 6px; font-size: 10px; color: #A8A397">Margarita Robinson Leadership Award</div><div class="mono" style="margin-top: 6px; font-size: 10px; color: #A8A397">Mary Jeanne Gilhooly Award</div></div></div>
+  </div>
+</section>
+
+<!-- 4 · CONTACT -->
+<footer id="contact" style="position: relative; z-index: 1; height: 900px">
+  <div style="position: absolute; left: 0; right: 0; top: 190px; display: flex; justify-content: center"><span class="mono reveal" style="color: #A8A397">Contact</span></div>
+  <div style="position: absolute; left: 0; right: 0; top: 520px; display: flex; flex-direction: column; align-items: center; text-align: center">
+    <h2 class="reveal" style="margin: 0; font-weight: 300; font-size: 104px; line-height: 1; letter-spacing: -0.03em">Let’s talk.</h2>
+    <div class="reveal" style="display: flex; gap: 12px; margin-top: 36px">
+      <a class="pill mono" href="mailto:nitika.m@gmail.com">Email <span class="pill-arrow" aria-hidden="true">→</span></a>
+      <a class="pill mono" href="https://www.linkedin.com/in/nitikamummidivarapu">LinkedIn <span class="pill-arrow" aria-hidden="true">↗</span></a>
+    </div>
+  </div>
+  <div class="mono" style="position: absolute; left: 120px; right: 120px; bottom: 0; height: 64px; display: flex; align-items: center; justify-content: space-between; color: rgba(255,250,234,0.8); font-size: 10px; background: #0B0A09">
+    <span>© 2026 Nitika Mummidivarapu</span><span>New York</span><span>Set in Newsreader &amp; DM Mono</span>
+  </div>
+</footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":5100}}'>
+class Component extends DCLogic {
+  componentDidMount() {
+    this.tick = () => {
+      if (this.raf) return;
+      this.raf = requestAnimationFrame(() => {
+        this.raf = null;
+        const se = document.scrollingElement || document.documentElement;
+        this.setState({ y: window.scrollY || se.scrollTop || 0, w: window.innerWidth || 1440 });
+      });
+    };
+    window.addEventListener('scroll', this.tick, { passive: true });
+    window.addEventListener('resize', this.tick);
+    this.tick();
+  }
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.tick);
+    window.removeEventListener('resize', this.tick);
+    if (this.raf) cancelAnimationFrame(this.raf);
+  }
+  renderVals() {
+    const st = this.state || {};
+    const W = Math.max(1024, st.w || 1440);
+    const H = 900, RX = 300, SY = [302, 406, 510];
+    // Keyframes: the arch's shape at each section (0 hero … 4 contact)
+    const K = [
+      { cx: W / 2, w: 760, s: 540, b: 900, t: 22, tk: 1, sea: 0, so: [0, 0, 0], sy: SY },
+      { cx: RX, w: 300, s: 380, b: 900, t: 16, tk: 1, sea: 0, so: [0, 0, 0], sy: SY },
+      { cx: RX, w: 18, s: 140, b: 900, t: 6, tk: 0, sea: 0, so: [1, 1, 0], sy: SY },
+      { cx: RX, w: 30, s: 168, b: 822, t: 4, tk: 0, sea: 0, so: [1, 1, 0], sy: [329, 485, 485] },
+      { cx: W / 2, w: Math.min(1200, W - 240), s: 700, b: 760, t: 30, tk: 1, sea: 1, so: [0, 0, 0], sy: [700, 700, 700] }
+    ];
+    const y = st.y || 0, X = 600;   // X = extra scroll the About screen is held for
+    const pe = y <= 900 ? y / 900 : (y <= 900 + X ? 1 : (y - X) / 900);
+    const p = Math.min(4, Math.max(0, pe));
+    const sm = (a, b, v) => { const t = Math.min(1, Math.max(0, (v - a) / (b - a))); return t * t * (3 - 2 * t); };
+    const stat = !(y > 0);          // un-scrolled (canvas view): show all copy
+    const aboutIn = stat ? 1 : sm(700, 1000, y), itIn = stat ? 1 : sm(1300, 1450, y);
+    const i = Math.min(3, Math.floor(p));
+    let f = p - i;
+    f = Math.min(1, Math.max(0, (f - 0.18) / 0.64));      // hold each pose, then move
+    f = f * f * (3 - 2 * f);                                // ease in-out
+    const PO = [0, 0, 0, 1, 0];      // portico: 0 hero, about, career · 1 education · 0 contact
+    const A = K[i], B = K[i + 1];
+    const L = (a, b) => a + (b - a) * f;
+    const g = {
+      cx: L(A.cx, B.cx), w: L(A.w, B.w), s: L(A.s, B.s), b: L(A.b, B.b), t: L(A.t, B.t),
+      tk: L(A.tk, B.tk), sea: L(A.sea, B.sea), po: L(PO[i], PO[i + 1]),
+      col: p >= 3 ? 1 - sm(3320, 3490, y) : L(PO[i], PO[i + 1]),   // column fades out before the Education header leaves the screen
+      so: A.so.map((v, k) => L(v, B.so[k])), sy: A.sy.map((v, k) => L(v, B.sy[k]))
+    };
+    return Object.assign({ W, aboutOp: Math.round(aboutIn * 100) / 100, aboutY: Math.round((1 - aboutIn) * 48 - (stat ? 0 : 130 * sm(1000, 1280, y))), itOp: Math.round(itIn * 100) / 100 }, Component.paths(g, W));
+  }
+  static paths(g, W) {
+    const n = (v) => Math.round(v * 10) / 10;
+    const r = g.w / 2, ri = Math.max(0.5, r - g.t), cx = g.cx, s = g.s, b = g.b;
+    const arc = (R) => 'M' + n(cx - R) + ' ' + n(b) + 'L' + n(cx - R) + ' ' + n(s) + 'A' + n(R) + ' ' + n(R) + ' 0 0 1 ' + n(cx + R) + ' ' + n(s) + 'L' + n(cx + R) + ' ' + n(b);
+    let ticks = '';
+    for (let k = 1; k <= 12; k++) {
+      const a = Math.PI - (k * Math.PI) / 13, c = Math.cos(a), sn = Math.sin(a);
+      ticks += 'M' + n(cx + c * ri) + ' ' + n(s - sn * ri) + 'L' + n(cx + c * r) + ' ' + n(s - sn * r);
+    }
+    ticks += 'M' + n(cx - r - 14) + ' ' + n(s) + 'L' + n(cx - ri) + ' ' + n(s) + 'M' + n(cx + ri) + ' ' + n(s) + 'L' + n(cx + r + 14) + ' ' + n(s);
+    let sea = 'M0 ' + n(b) + 'L' + W + ' ' + n(b);
+    // Ionic column for the Education screen: fluted shaft, Ionic capital (volutes), Attic base, and a plain 3-line lintel
+    const po = g.po || 0;
+    let entab = '', shaftL = '', baseL = '', capL = '';
+    const co = g.col === undefined ? po : g.col;
+    if (co > 0.01) {
+      const LX = 300, h1 = 18.5, y2 = 826, h2 = 18.5 + 3.5 * (y2 - 178) / 648;
+      const circ = (x0, y0, rr) => 'M' + n(x0 - rr) + ' ' + y0 + 'a' + rr + ' ' + rr + ' 0 1 0 ' + (2 * rr) + ' 0a' + rr + ' ' + rr + ' 0 1 0 ' + (-2 * rr) + ' 0';
+      [-1, 1].forEach((sg) => { shaftL += 'M' + n(LX + sg * h1) + ' 178L' + n(LX + sg * h2) + ' ' + y2; });
+      [-0.8, -0.55, -0.3, 0.3, 0.55, 0.8].forEach((o) => { shaftL += 'M' + n(LX + o * h1) + ' 178L' + n(LX + o * h2) + ' ' + y2; });
+      capL = 'M' + (LX - 36) + ' 142h72v8h-72Z' +
+        // the inverted-U between the volutes is the shared arch itself (drawn separately)
+        circ(LX - 24, 168, 9) + circ(LX - 24, 168, 4) + circ(LX + 24, 168, 9) + circ(LX + 24, 168, 4);
+      baseL = 'M' + (LX - 28) + ' 822h56v12h-56ZM' + (LX - 30) + ' 834h60v12h-60ZM' + (LX - 34) + ' 846h68v20h-68Z';
+      [118, 130, 142].forEach((yy) => { entab += 'M' + (LX - 44) + ' ' + yy + 'h88'; });
+      entab += 'M' + (LX - 44) + ' 118v24M' + (LX + 44) + ' 118v24';
+      [868, 876].forEach((yy) => { entab += 'M' + (LX - 46) + ' ' + yy + 'h92'; });
+    }
+    let stones = '';
+    g.so.forEach((o, k) => {
+      const z = 6 * o, y = g.sy[k];
+      if (z > 0.3) stones += 'M' + n(cx) + ' ' + n(y - z) + 'L' + n(cx + z) + ' ' + n(y) + 'L' + n(cx) + ' ' + n(y + z) + 'L' + n(cx - z) + ' ' + n(y) + 'Z';
+    });
+    return {
+      outer: arc(r), inner: arc(ri), ticks, sea, stones, entab, shaftL, baseL, capL,
+      colOp: n(co),
+      outerOp: 0.62, innerOp: 0.38,
+      tickOp: n(0.4 * g.tk * Math.min(1, Math.max(0, (r - 30) / 120))),
+      seaOp: n(0.4 * g.sea),
+      starT: 'translate(' + n(cx) + ' ' + n(s - r) + ') scale(' + n(1 - po) + ') translate(-6 -6)'
+    };
+  }
+}
+</script>
+</body>
+</html>
